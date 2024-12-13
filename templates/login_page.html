@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1db954;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page Container -->
+    <main class="booking-container">
+        <form id="loginForm" class="booking-form" action="{{ url_for('login') }}" method="POST">
+            <h2>Login</h2>
+
+            <!-- Display Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flash-messages">
+                        {% for category, message in messages %}
+                            <li class="flash-message {{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Email Input -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Password Input -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <!-- Remember Me Checkbox -->
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit">Login</button>
+
+            <!-- Forgot Password and Signup Links -->
+            <p class="form-links" style="text-align: center; margin-top: 15px;">
+                <a href="#" style="color: #1db954; text-decoration: none;">Forgot Password?</a>
+                <br>
+                <a href="{{ url_for('signup') }}" style="color: #1db954; text-decoration: none;">Create a new account</a>
+            </p>
+        </form>
+    </main>
+
+    <!-- Notification message -->
+    <div id="notification" class="notification">
+        Login Successful!
+    </div>
+
+    <footer>
+        <div class="container">
+            <p style="color: white;">&copy; 2024 The Music Organizer. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

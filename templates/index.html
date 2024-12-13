@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Organizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>The Music Organizer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="show.html">Stage Booking</a></li>
+                    <li><a href="#upload">Upload</a></li>
+                    <form action="login_page.html" method="get">
+                        <button type="submit">Login</button>
+                    </form>
+                    
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Organize Your Music Like Never Before</h2>
+            <p>Easily upload, sort, and create playlists of your favorite tracks.</p>
+            <a href="#library" class="btn">Explore Library</a>
+            <a href="audition.html" class="btn">Book an Audition</a>
+        </div>
+    </section>
+
+    <section id="upload" class="upload-container">
+        <div class="upload-card">
+            <!-- Left Side - Rules Section -->
+            <div class="rules">
+                <h2>Rules for Uploading Music</h2>
+                <ol>
+                    <li><strong>Original Content:</strong> Only upload music that you own or have permission to distribute. Copyright violations are strictly prohibited.</li>
+                    <li><strong>Audio Quality:</strong> Ensure your music is of high quality (minimum 320kbps for MP3 or lossless formats).</li>
+                    <li><strong>Metadata:</strong> Include proper metadata, such as the artist name, album title, and genre, to ensure your music is discoverable.</li>
+                    <li><strong>No Explicit Content:</strong> Avoid uploading songs with offensive language, hate speech, or any content that violates community guidelines.</li>
+                    <li><strong>File Formats:</strong> Supported formats include MP3, WAV, and FLAC. Ensure the file size is under 100MB.</li>
+                    <li><strong>Cover Art:</strong> If uploading an album, provide a high-quality cover image (minimum 500x500 pixels).</li>
+                    <li><strong>Spam and Duplication:</strong> Do not upload duplicate tracks or spam the platform with multiple versions of the same song.</li>
+                    <li><strong>Platform Rights:</strong> By uploading, you grant the platform the right to host, stream, and distribute your music.</li>
+                    <li><strong>Removal Requests:</strong> If you wish to remove your music, follow the proper removal request procedures outlined in our terms of service.</li>
+                    <li><strong>Community Respect:</strong> Maintain respect for the community and adhere to our platform's policies at all times.</li>
+                </ol>
+            </div>
+
+            <!-- Right Side - Form Section -->
+            <div class="upload-form">
+                <h2>Upload Your Music</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="song-title">Song Title:</label>
+                    <input type="text" id="song-title" name="song-title" required>
+
+                    <label for="artist-name">Artist Name:</label>
+                    <input type="text" id="artist-name" name="artist-name" required>
+
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="select">Select</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="classical">Classical</option>
+                    </select>
+
+                    <label for="audio-file">Upload Audio File:</label>
+                    <input type="file" id="audio-file" name="audio-file" accept=".mp3,.wav,.flac" required>
+
+                    <label for="cover-art">Upload Cover Art (Optional):</label>
+                    <input type="file" id="cover-art" name="cover-art" accept="image/*">
+
+                    <button type="submit">Upload Music</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="library" class="container">
+        <h2 class="section-title">Music Library</h2>
+        <div class="library">
+            <!-- Music Cards -->
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div> <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover1.jpg" alt="Song Cover">
+                <h3>Song Title</h3>
+                <p>Artist: Artist Name</p>
+                <p>Album: Album Name</p>
+                <p>Genre: Pop</p>
+            </div>
+            <div class="music-card">
+                <img src="song-cover2.jpg" alt="Song Cover">
+                <h3>Song Title 2</h3>
+                <p>Artist: Another Artist</p>
+                <p>Album: Another Album</p>
+                <p>Genre: Rock</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Music Organizer. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

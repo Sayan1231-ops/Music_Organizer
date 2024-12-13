@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Public Show</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Music Organizer</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Back to Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="booking-container">
+        <div class="booking-form">
+            <h2>Book Your Public Show</h2>
+            <form id="bookingForm" action="#" method="post">
+                <label for="show-name">Show Name</label>
+                <input type="text" id="show-name" name="show-name" value="Singer's Live Performance" readonly>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="tickets">Number of Seats</label>
+                <input type="number" id="tickets" name="tickets" placeholder="Enter number of tickets" min="1" required>
+
+                <label for="date">Show Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" name="message" placeholder="Any special requests?" rows="4"></textarea>
+
+                <button type="submit" class="btn">Book a Public Show</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification message -->
+    <div id="notification" class="notification">
+        Show Booked Successfully!
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Public Show Booking. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listener to the form
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Show the notification
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+
+            // Automatically hide the notification after 3 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+
+            // Optional: Reset the form after submission (you can also redirect or handle further actions here)
+            this.reset();
+        });
+    </script>
+</body>
+</html>

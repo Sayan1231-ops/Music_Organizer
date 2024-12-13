@@ -1,0 +1,541 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('1.webp'); /* Path to your image */
+    background-size: cover;        /* Ensures the image fits entirely within the viewport */
+    background-repeat: no-repeat;    /* Prevents the image from repeating */
+    background-attachment: fixed;    /* Keeps the background fixed while scrolling */
+    background-position: center center; /* Centers the image in the viewport */
+    color: #f4f4f4;                  /* Sets a light text color for readability */
+    line-height: 1.6;                /* Improves text spacing */
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.6);  
+    padding: 10px 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    backdrop-filter: blur(10px);  
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+     
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background: #e803c5;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+    background: #17a743;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Library Section */
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.music-card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.music-card:hover {
+    transform: scale(1.05);
+}
+
+.music-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.music-card h3 {
+    margin: 10px 0;
+    color: #1db954;
+}
+
+/* Upload Form */
+.upload-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.upload-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left Side - Rules Section */
+.rules {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid #1db954;
+}
+
+.rules h2 {
+    color: #1db954;
+    margin-bottom: 15px;
+}
+
+.rules ol {
+    padding-left: 20px;
+}
+
+.rules li {
+    margin-bottom: 15px;
+}
+
+.rules li strong {
+    color: #1db954;
+}
+
+/* Right Side - Form Section */
+.upload-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.upload-form h2 {
+    color: #1db954;
+    margin-bottom: 20px;
+}
+
+.upload-form label {
+    font-size: 1rem;
+    color: #1db954;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Styling for select dropdown */
+.upload-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff; /* Change text color to white */
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.upload-form select option {
+    background-color: #000; /* Black background for options */
+    color: #fff; /* White text for options */
+}
+
+/* Styling for input fields and button */
+.upload-form input,
+.upload-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.upload-form input:focus,
+.upload-form select:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.8);
+}
+
+/* Button styling */
+.upload-form button {
+    background: #e803c5;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.upload-form button:hover {
+    background: #17a743;
+}
+
+.upload-form button:active {
+    background: #0e7c31;
+}
+
+/* About Section */
+.about-section {
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    padding: 40px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1db954; /* Accent color */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Audition Form Specific Styles */
+/* Styles for the audition form container */
+.audition-form-container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section title styling */
+.audition-form-container h2 {
+    color: #1db954;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Label styling */
+.audition-form label {
+    color: #1db954;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Input, textarea, and button base styling */
+.audition-form input,
+.audition-form textarea,
+.audition-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus styling for input and textarea */
+.audition-form input:focus,
+.audition-form textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.8);
+    outline: none;
+}
+
+/* Button styling */
+.audition-form button {
+    background: #e803c5;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.audition-form button:hover {
+    background: #17a743;
+    transform: scale(1.05);
+}
+
+/* Button active (clicked) effect */
+.audition-form button:active {
+    background: #0e7c31;
+    transform: scale(0.95);
+}
+
+/* Booking Container */
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     
+}
+
+.booking-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.booking-form h2 {
+    font-size: 2rem;
+    color: #1db954;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-form label {
+    font-size: 1rem;
+    color: #1db954;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.8);
+}
+
+.booking-form button {
+    padding: 12px;
+    background: #e803c5;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #17a743;
+}
+
+.booking-form button:active {
+    background: #0e7c31;
+}
+/* "Remember Me" Styling */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.remember-me input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 2px solid #1db954;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background: #1db954;
+    border-color: #1db954;
+}
+
+.remember-me input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.8);
+}
+
+.remember-me label {
+    cursor: pointer;
+}
+ 
+
+
+/* General Button Style */
+button {
+    background-color: #1db954; /* Spotify Green */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #1aa34a; /* Slightly darker green */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Style */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(29, 185, 84, 0.3); /* Green focus ring */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+     
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-top: 20px;
+}
+
+/* For small devices (phones, <600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+    .hero {
+        height: 40vh; /* Reduce hero section height */
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header nav ul {
+        flex-direction: column; /* Stack menu vertically */
+        gap: 10px;
+    }
+    .library {
+        grid-template-columns: 1fr; /* Single-column layout */
+    }
+    .upload-card, .about-content, .audition-form-container {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+}
+
+/* For tablets (600px - 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Stack header content */
+    }
+    .hero {
+        height: 50vh; /* Adjust hero height */
+    }
+    .library {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
+}
+
+/* For desktops (>768px) */
+@media (min-width: 768px) {
+    .library {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+    .upload-card, .about-content, .audition-form-container {
+        max-width: 80%; /* Maintain a consistent max width */
+    }
+}

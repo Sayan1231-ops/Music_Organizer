@@ -1,0 +1,36 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Music Organizer</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Back to Home</a></li> <!-- Corrected the link to use url_for -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to our college project! This project aims to create an interactive and user-friendly platform to help users enjoy various multimedia content and contribute their own. Our goal is to provide a seamless experience, and we are committed to ensuring user satisfaction with an easy-to-use interface and engaging content.</p>
+
+            <p>Our team consists of talented individuals working towards a common goal: to make this platform a valuable resource for all users. We continuously work on improving the platform and making it more accessible and useful.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Project Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
